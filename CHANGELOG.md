@@ -4,4 +4,4 @@
 
 ## v0.2.3 (2021-03-21)
 ### Fix
-* Isort imports ([`c006a87`](https://github.com/rhooper/pelican-lunr/commit/c006a87a682b2c3d96cc9ba38c2de9f21613d253))
+* Isort imports ([`db59492`](https://github.com/kattni/pelican-lunr/commit/db59492a7e3ae67c768d2150d756486b20958adb))
