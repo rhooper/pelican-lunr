@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.5 (2021-03-27)
+### Fix
+* Fix dependency on lunr ([`cfb5f31`](https://github.com/rhooper/pelican-lunr/commit/cfb5f31b0b7e147a9eca42ceab675f2b06d05929))
+
 <!-- markdownlint-disable headings -->
 
 ## v0.2.4 (2021-03-22)
