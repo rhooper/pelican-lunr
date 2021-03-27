@@ -27,5 +27,5 @@ setuptools.setup(
     ],
     packages=["pelican.plugins.pelican_lunr"],
     python_requires=">=3.6",
-    install_requires=["beautifulsoup4", "pelican>4.5.0,<5", "pelican_lunr"],
+    install_requires=["beautifulsoup4", "pelican>4.5.0,<5", "lunr"],
 )
