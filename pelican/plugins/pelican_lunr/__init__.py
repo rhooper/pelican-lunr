@@ -85,8 +85,9 @@ class LunrWriter(writers.Writer):
             # output = 'var documents = ' + json.dumps(context['index_data'], indent=2) + ";"
             path = sanitised_join(output_path, name)
 
-            if not os.path.exists(path):
-                os.makedirs(os.path.dirname(path))
+            dir = os.path.dirname(path)
+            if not os.path.exists(dir):
+                os.makedirs(dir)
 
             idx = lunr(
                 ref="ref",
@@ -111,7 +112,7 @@ class LunrWriter(writers.Writer):
                         del cleaned_doc["body"]
                         yield cleaned_doc
 
-                handle.write(json.dumps(doc for doc in remove_body()))
+                handle.write(json.dumps([doc for doc in remove_body()]))
                 handle.write(";\n")
             logger.info("Writing %s", path)
 
@@ -124,9 +125,23 @@ class LunrWriter(writers.Writer):
         _write_file(self.output_path, name, override_output)
 
 
+def get_generator(_):
+    """
+    Returns the generator class.
+    """
+    return LunrGenerator
+
+
+def get_writer(_):
+    """
+    Returns the writer class.
+    """
+    return LunrWriter
+
+
 def register():
     """
     Registers signals with Pelican.
     """
-    signals.get_generators.connect(lambda: LunrGenerator)
-    signals.get_writer.connect(lambda: LunrWriter)
+    signals.get_generators.connect(get_generator)
+    signals.get_writer.connect(get_writer)
