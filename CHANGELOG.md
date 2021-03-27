@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.6 (2021-03-27)
+### Fix
+* Fix registration ([`0dfebe8`](https://github.com/rhooper/pelican-lunr/commit/0dfebe8dce2b47e6dcf51985062b13ec617e87a1))
+
 ## v0.2.5 (2021-03-27)
 ### Fix
 * Fix dependency on lunr ([`cfb5f31`](https://github.com/rhooper/pelican-lunr/commit/cfb5f31b0b7e147a9eca42ceab675f2b06d05929))
