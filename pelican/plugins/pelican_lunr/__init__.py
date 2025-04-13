@@ -9,7 +9,7 @@ from lunr import lunr
 from pelican import generators, logger, writers
 from pelican.contents import Article
 from pelican.plugins import signals
-from pelican.utils import is_selected_for_writing, sanitised_join
+from pelican.utils import sanitised_join
 
 
 class LunrGenerator(generators.ArticlesGenerator):
@@ -66,15 +66,6 @@ class LunrWriter(writers.Writer):
             output with the same name (and if next files written with the same
             name should be skipped to keep that one)
         """
-
-        if (
-            name is False
-            or name == ""
-            or not is_selected_for_writing(
-                self.settings, os.path.join(self.output_path, name)
-            )
-        ):
-            return
 
         if not name:
             return
