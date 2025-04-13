@@ -9,3 +9,14 @@ build-backend = "setuptools.build_meta"
 version_variable = ['setup.py:__version__']
 branch = 'main'
 
+[project]
+name = "pelican-lunr"
+version = "0.3.0"
+description = "A plugin for Pelican to add lunr.js search functionality"
+readme = "README.md"
+license = {text = "MIT"}
+dependencies = [
+    "beautifulsoup4~=4.13.3",
+    "pelican>=4.9.0",
+    "lunr~=0.8.0"
+]
